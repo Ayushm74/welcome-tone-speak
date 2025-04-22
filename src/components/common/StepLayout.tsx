@@ -30,18 +30,23 @@ const Step = ({ number, title, description, icon: Icon, isLeft = true }: StepPro
           {isLeft && (
             <div className="space-y-2">
               <h3 className="font-semibold text-xl flex items-center justify-end gap-2">
-                {title}
+                <span>{title}</span>
                 <Icon className="h-5 w-5 text-nile-600" />
               </h3>
-              <p className="text-gray-600 max-w-md ml-auto">{description}</p>
+              <p className="text-gray-600 max-w-md ml-auto leading-relaxed">
+                {description}
+              </p>
             </div>
           )}
         </div>
 
-        {/* Center number */}
-        <div className="relative flex items-center justify-center">
-          <div className="w-12 h-12 rounded-full bg-nile-600 text-white flex items-center justify-center font-bold text-lg">
+        {/* Center number and icon */}
+        <div className="relative flex flex-col items-center justify-center gap-2">
+          <div className="w-10 h-10 rounded-full bg-nile-600 text-white flex items-center justify-center font-bold text-lg">
             {number}
+          </div>
+          <div className="w-12 h-12 rounded-full bg-nile-50 border-2 border-nile-200 flex items-center justify-center">
+            <Icon className="h-6 w-6 text-nile-600" />
           </div>
         </div>
 
@@ -54,9 +59,11 @@ const Step = ({ number, title, description, icon: Icon, isLeft = true }: StepPro
             <div className="space-y-2">
               <h3 className="font-semibold text-xl flex items-center gap-2">
                 <Icon className="h-5 w-5 text-nile-600" />
-                {title}
+                <span>{title}</span>
               </h3>
-              <p className="text-gray-600 max-w-md">{description}</p>
+              <p className="text-gray-600 max-w-md leading-relaxed">
+                {description}
+              </p>
             </div>
           )}
         </div>

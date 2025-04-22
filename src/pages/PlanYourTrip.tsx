@@ -12,25 +12,25 @@ const steps = [
   {
     number: "01",
     title: "Share Medical Reports",
-    description: "Send us your medical reports and requirements. Our team will review them within 24 hours to provide personalized recommendations.",
+    description: "Send us your medical reports and requirements. Our team will review them within 24 hours to provide personalized care options.",
     icon: FileCheck
   },
   {
     number: "02",
     title: "Receive Treatment Plan",
-    description: "Get a detailed treatment plan including hospital options, estimated costs, and duration of stay. Ask any questions you have.",
+    description: "Get a detailed treatment plan including hospital recommendations and cost estimates. Our experts will answer all your questions.",
     icon: Hospital
   },
   {
     number: "03",
     title: "Travel Arrangements",
-    description: "Once you're ready, we'll help arrange your travel, accommodation, and hospital appointments. We handle all the logistics.",
+    description: "We'll help coordinate your travel plans and visa process. Our team ensures all logistics are handled seamlessly.",
     icon: Plane
   },
   {
     number: "04",
     title: "Begin Treatment",
-    description: "Arrive in India and begin your treatment with full support from our team throughout your medical journey.",
+    description: "Start your medical journey with complete support from our team. We'll be with you every step of your treatment process.",
     icon: Calendar
   }
 ];
