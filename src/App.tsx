@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SpineBrainSurgery from "./pages/treatments/SpineBrainSurgery";
 import KidneyLiverTransplant from "./pages/treatments/KidneyLiverTransplant";
+import PlanYourTrip from "./pages/PlanYourTrip";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/plan-your-trip" element={<PlanYourTrip />} />
           <Route path="/treatments/spine-brain-surgery" element={<SpineBrainSurgery />} />
           <Route path="/treatments/kidney-liver-transplant" element={<KidneyLiverTransplant />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

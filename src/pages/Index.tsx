@@ -3,10 +3,39 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Globe, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle, Globe, Phone, FileCheck, Hospital, Plane, Calendar } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
+import StepLayout from "@/components/common/StepLayout";
+
+// Journey steps for homepage
+const journeySteps = [
+  {
+    number: "01",
+    title: "Free Medical Opinion",
+    description: "Share your medical reports with us. Our expert doctors will review and provide personalized treatment options within 24 hours.",
+    icon: FileCheck
+  },
+  {
+    number: "02",
+    title: "Customized Treatment Plan",
+    description: "Receive a detailed treatment plan with hospital options, cost estimates, and duration. We ensure transparency at every step.",
+    icon: Hospital
+  },
+  {
+    number: "03",
+    title: "Travel & Accommodation",
+    description: "Let us handle your travel arrangements, visa processing, and comfortable accommodation options based on your preferences.",
+    icon: Plane
+  },
+  {
+    number: "04",
+    title: "Complete Medical Support",
+    description: "Experience seamless healthcare with our team by your side throughout your medical journey in India.",
+    icon: Calendar
+  }
+];
 
 const Index = () => {
   return (
@@ -92,6 +121,21 @@ const Index = () => {
           </div>
         </section>
         
+        {/* Journey Steps Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-6">
+                Your Medical Journey with Us
+              </h2>
+              <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+                We provide end-to-end assistance for your medical treatment in India, ensuring a smooth and hassle-free experience.
+              </p>
+              <StepLayout steps={journeySteps} />
+            </div>
+          </div>
+        </section>
+        
         {/* CTA Section */}
         <section className="bg-nile-600 text-white py-16">
           <div className="container mx-auto px-4 text-center">
@@ -107,6 +151,18 @@ const Index = () => {
                 Call Us Now
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* Link to Plan Your Trip */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4 text-center">
+            <h3 className="text-2xl font-semibold mb-6">Want to Learn More About Planning Your Trip?</h3>
+            <Link to="/plan-your-trip">
+              <Button className="bg-nile-600 hover:bg-nile-700 text-white">
+                Plan Your Medical Trip <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </section>
       </main>
